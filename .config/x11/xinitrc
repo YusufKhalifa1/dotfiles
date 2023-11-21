@@ -1,0 +1,14 @@
+#!/bin/bash
+
+dunst &
+sxhkd &
+gnome-keyring-daemon -d  
+/usr/libexec/polkit-gnome-authentication-agent-1 &
+dwmblocks &
+feh --bg-scale --randomize $HOME/.local/Github/nord-backgrounds/*  
+picom &
+pipewire &
+setxkbmap -layout us,ara -variant ,digits -option grp:sclk_toggle caps:escape 
+
+dbus-update-activation-environment --all
+ssh-agent dwm

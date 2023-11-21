@@ -1,0 +1,23 @@
+super + w 
+	$BROWSER
+
+super + d
+	$MENU
+
+super + Return 
+	$TERMINAL
+
+super + shift + {e,a,d}
+	setxkbmap -layout {us,ara,de}
+
+super + v
+	$TERMINAL -e $EDITOR
+
+super + {equal,minus,BackSpace}
+	volume {up,down,toggle}
+
+super + Escape
+	kill -10 $(pidof sxhkd)
+	
+super + shift + BackSpace	
+	power	

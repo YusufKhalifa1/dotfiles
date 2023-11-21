@@ -1,0 +1,7 @@
+#!/bin/bash
+
+choice=$(echo -e "Shutdown\nReboot\nExit" | dmenu)
+
+[ $choice = "Shutdown" ] && doas shutdown now
+[ $choice = "Reboot" ] && doas reboot
+[ $choice = "Exit" ] && pkill dwm
